@@ -1,0 +1,10 @@
+/* Import Tailwind CSS */
+@import "./tailwind.css";
+
+/* Import font styles */
+@import "./font.css";
+
+/* 기본 line-height 설정 */
+body {
+  line-height: 1.5;
+}

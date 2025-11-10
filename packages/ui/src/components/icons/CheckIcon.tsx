@@ -1,0 +1,25 @@
+import React from "react";
+import { iconVariants } from "./base";
+import { cn } from "../../lib/utils";
+import { type VariantProps } from "class-variance-authority";
+
+type CheckIconProps = VariantProps<typeof iconVariants> & {
+  className?: string;
+};
+
+export const CheckIcon: React.FC<CheckIconProps> = ({ className, color = "DEFAULT", size = "sm" }) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={cn(iconVariants({ color, size }), className)}
+    >
+      <g>
+        <path d="M9.54998 18.0001L3.84998 12.3001L5.27498 10.8751L9.54998 15.1501L18.725 5.9751L20.15 7.4001L9.54998 18.0001Z" />
+      </g>
+    </svg>
+  );
+};

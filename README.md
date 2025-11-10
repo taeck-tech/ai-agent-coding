@@ -1,208 +1,50 @@
-# Turborepo Design System Starter
+# Turborepo Exam
 
-This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
+## 프로젝트 개요
 
-This guide explains how to use a React design system starter powered by:
+이 저장소는 **AI 에이전트를 적극적으로 활용해 개발 지식을 학습하고 실습하기 위한 스터디 프로젝트**입니다.  
+모든 학습 흐름을 모노레포 환경에서 운영하며, 에이전트가 생성한 코드와 문서를 검증·정리하는 과정을 통해 협업형 학습 경험을 구축하는 것이 목표입니다.
 
-- 🏎 [Turborepo](https://turborepo.com) — High-performance build system for Monorepos
-- 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
-- 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
+## 핵심 목표
 
-As well as a few others tools preconfigured:
+- AI 에이전트와의 페어 프로그래밍을 통해 다양한 UI/UX 패턴과 도구를 학습합니다.
+- 자동화된 코드 리뷰와 테스트 작성을 실험하며, 품질 중심의 개발 습관을 익힙니다.
+- 학습 결과는 각 패키지/앱의 `README.md`에 기록해 지식 베이스를 축적합니다.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-- [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs
-- [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing
+## 기술 스택 및 운영 방식
 
-## Using this example
+- **Monorepo**: [Turborepo](https://turbo.build/repo)를 기반으로 패키지 간 빌드·테스트 파이프라인을 공유합니다.
+- **패키지 매니저**: Yarn 4 (`yarn@4.x`)을 사용합니다.
+- **언어/프레임워크**: TypeScript, React, Storybook, Tailwind CSS, Tsup 등을 채택해 디자인 시스템과 문서를 관리합니다.
+- **품질 도구**: ESLint, Prettier, Changesets 등을 사용하며, 공통 설정은 공유 패키지로 추상화했습니다.
 
-Run the following command:
+## 모노레포 구조
 
-```sh
-npx create-turbo@latest -e design-system
+```
+.
+├── apps/
+│   └── docs/                   # Storybook 기반 UI 문서 및 예시 환경
+├── packages/
+│   ├── ui/                     # 디자인 시스템 핵심 UI 컴포넌트
+│   ├── tailwind-preset-config/ # Tailwind CSS 프리셋과 토큰
+│   ├── typescript-config/      # 공유 TypeScript 설정
+│   └── eslint-config/          # 공용 ESLint 룰셋
+├── turbo.json                  # Turborepo 파이프라인 정의
+└── yarn.lock                   # Yarn Plug'n'Play 잠금 파일
 ```
 
-### Useful Commands
+각 디렉터리는 독립적인 학습 주제를 다루며, 세부 설정과 사용법은 각 영역의 `README.md`에 정리합니다.
 
-- `pnpm build` - Build all packages, including the Storybook site
-- `pnpm dev` - Run all packages locally and preview with Storybook
-- `pnpm lint` - Lint all packages
-- `pnpm changeset` - Generate a changeset
-- `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
+## 기본 워크플로우
 
-## Turborepo
+- 의존성 설치: `yarn install`
+- 패키지 개발 서버 실행: `yarn dev`
+- 전체 빌드: `yarn build`
+- 린트 및 포맷: `yarn lint`, `yarn format`
+- Storybook 프리뷰: `yarn preview-storybook`
 
-[Turborepo](https://turborepo.com) is a high-performance build system for JavaScript and TypeScript codebases. It was designed after the workflows used by massive software engineering organizations to ship code at scale. Turborepo abstracts the complex configuration needed for monorepos and provides fast, incremental builds with zero-configuration remote caching.
+터보 캐시를 활용하므로, 명령어 실행 시 `turbo run <task>` 형태의 병렬 처리와 결과 캐싱이 자동으로 적용됩니다.
 
-Using Turborepo simplifies managing your design system monorepo, as you can have a single lint, build, test, and release process for all packages. [Learn more](https://vercel.com/blog/monorepos-are-changing-how-teams-build-software) about how monorepos improve your development workflow.
+## 추가 문서
 
-## Apps & Packages
-
-This Turborepo includes the following packages and applications:
-
-- `apps/docs`: Component documentation site with Storybook
-- `packages/ui`: Core React components
-- `packages/typescript-config`: Shared `tsconfig.json`s used throughout the Turborepo
-- `packages/eslint-config`: ESLint preset
-
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/). Workspaces enables us to "hoist" dependencies that are shared between packages to the root `package.json`. This means smaller `node_modules` folders and a better local dev experience. To install a dependency for the entire monorepo, use the `-w` workspaces flag with `pnpm add`.
-
-This example sets up your `.gitignore` to exclude all generated files, other folders like `node_modules` used to store your dependencies.
-
-### Compilation
-
-To make the ui library code work across all browsers, we need to compile the raw TypeScript and React code to plain JavaScript. We can accomplish this with `tsup`, which uses `esbuild` to greatly improve performance.
-
-Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
-
-For `@acme/ui`, the `build` command is equivalent to the following:
-
-```bash
-tsup src/*.tsx --format esm,cjs --dts --external react
-```
-
-`tsup` compiles all of the components in the design system individually, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `@acme/ui` then instructs the consumer to select the correct format:
-
-```json:ui/package.json
-{
-  "name": "@acme/ui",
-  "version": "0.0.0",
-  "sideEffects": false,
-  "exports":{
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    }
-  }
-}
-```
-
-Run `pnpm build` to confirm compilation is working correctly. You should see a folder `ui/dist` which contains the compiled output.
-
-```bash
-ui
-└── dist
-    ├── button.d.ts  <-- Types
-    ├── button.js    <-- CommonJS version
-    ├── button.mjs   <-- ES Modules version
-    └── button.d.mts   <-- ES Modules version with Types
-```
-
-## Components
-
-Each file inside of `ui/src` is a component inside our design system. For example:
-
-```tsx:ui/src/Button.tsx
-import * as React from 'react';
-
-export interface ButtonProps {
-  children: React.ReactNode;
-}
-
-export function Button(props: ButtonProps) {
-  return <button>{props.children}</button>;
-}
-
-Button.displayName = 'Button';
-```
-
-When adding a new file, ensure that its specifier is defined in `package.json` file:
-
-```json:ui/package.json
-{
-  "name": "@acme/ui",
-  "version": "0.0.0",
-  "sideEffects": false,
-  "exports":{
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    }
-    // Add new component exports here
-  }
-}
-```
-
-## Storybook
-
-Storybook provides us with an interactive UI playground for our components. This allows us to preview our components in the browser and instantly see changes when developing locally. This example preconfigures Storybook to:
-
-- Use Vite to bundle stories instantly (in milliseconds)
-- Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@acme/ui` for imports
-- Write MDX for component documentation pages
-
-For example, here's the included Story for our `Button` component:
-
-```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@acme/ui/button';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-
-<Meta title="Components/Button" component={Button} />
-
-# Button
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
-
-## Props
-
-<Props of={Box} />
-
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
-```
-
-This example includes a few helpful Storybook scripts:
-
-- `pnpm dev`: Starts Storybook in dev mode with hot reloading at `localhost:6006`
-- `pnpm build`: Builds the Storybook UI and generates the static HTML files
-- `pnpm preview-storybook`: Starts a local server to view the generated Storybook UI
-
-## Versioning & Publishing Packages
-
-This example uses [Changesets](https://github.com/changesets/changesets) to manage versions, create changelogs, and publish to npm. It's preconfigured so you can start publishing packages immediately.
-
-You'll need to create an `NPM_TOKEN` and `GITHUB_TOKEN` and add it to your GitHub repository settings to enable access to npm. It's also worth installing the [Changesets bot](https://github.com/apps/changeset-bot) on your repository.
-
-### Generating the Changelog
-
-To generate your changelog, run `pnpm changeset` locally:
-
-1. **Which packages would you like to include?** – This shows which packages and changed and which have remained the same. By default, no packages are included. Press `space` to select the packages you want to include in the `changeset`.
-1. **Which packages should have a major bump?** – Press `space` to select the packages you want to bump versions for.
-1. If doing the first major version, confirm you want to release.
-1. Write a summary for the changes.
-1. Confirm the changeset looks as expected.
-1. A new Markdown file will be created in the `changeset` folder with the summary and a list of the packages included.
-
-### Releasing
-
-When you push your code to GitHub, the [GitHub Action](https://github.com/changesets/action) will run the `release` script defined in the root `package.json`:
-
-```bash
-turbo run build --filter=docs^... && changeset publish
-```
-
-Turborepo runs the `build` script for all publishable packages (excluding docs) and publishes the packages to npm. By default, this example includes `acme` as the npm organization. To change this, do the following:
-
-- Rename folders in `packages/*` to replace `acme` with your desired scope
-- Search and replace `acme` with your desired scope
-- Re-run `pnpm install`
-
-To publish packages to a private npm organization scope, **remove** the following from each of the `package.json`'s
-
-```diff
-- "publishConfig": {
--  "access": "public"
-- },
-```
+패키지별 상세 목표, 설계 결정, 참고 링크는 각 디렉터리 최상단에 위치한 `README.md`에서 확인할 수 있습니다. 필요 시 해당 문서를 함께 업데이트하면서 학습 기록을 계속 확장해 주세요.

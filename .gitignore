@@ -11,3 +11,11 @@ dist-ssr
 server/dist
 public/dist
 storybook-static/
+
+.yarn/cache/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+.vscode/
+
+.cursor/rules/global.mdc

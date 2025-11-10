@@ -1,0 +1,102 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+/* :root {
+  --color-base-gray-light: #cccccc;
+  --color-base-gray-medium: #999999;
+  --color-base-gray-dark: #111111;
+  --color-base-red: #ff0000;
+  --color-base-green: #00ff00;
+} */
+
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local("Pretendard Black"),
+    url(./font/pretendard/Pretendard-Black.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Black.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src:
+    local("Pretendard ExtraBold"),
+    url(./font/pretendard/Pretendard-ExtraBold.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Pretendard Bold"),
+    url(./font/pretendard/Pretendard-Bold.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Pretendard SemiBold"),
+    url(./font/pretendard/Pretendard-SemiBold.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Pretendard Medium"),
+    url(./font/pretendard/Pretendard-Medium.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Pretendard Regular"),
+    url(./font/pretendard/Pretendard-Regular.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Pretendard Light"),
+    url(./font/pretendard/Pretendard-Light.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src:
+    local("Pretendard ExtraLight"),
+    url(./font/pretendard/Pretendard-ExtraLight.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-ExtraLight.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local("Pretendard Thin"),
+    url(./font/pretendard/Pretendard-Thin.woff2) format("woff2"),
+    url(./font/pretendard/Pretendard-Thin.woff) format("woff");
+}

@@ -1,5 +1,9 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "types": ["@testing-library/jest-dom"],
+    "lib": ["dom", "dom.iterable", "es2020"]
+  },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

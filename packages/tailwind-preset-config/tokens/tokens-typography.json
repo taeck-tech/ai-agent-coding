@@ -1,0 +1,249 @@
+{
+  "H1": {
+    "Bold-56": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "68",
+      "fontSize": "56",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "H2": {
+    "Bold-48": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "58",
+      "fontSize": "48",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "H3": {
+    "Bold-32": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "40",
+      "fontSize": "32",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Bold-24": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "32",
+      "fontSize": "24",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "Sub": {
+    "Bold-20": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "24",
+      "fontSize": "20",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Bold-18": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "22",
+      "fontSize": "18",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Bold-16": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Bold",
+      "lineHeight": "22",
+      "fontSize": "16",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "button": {
+    "Semibold-18": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "SemiBold",
+      "lineHeight": "22",
+      "fontSize": "18",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Semibold-16": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "SemiBold",
+      "lineHeight": "20",
+      "fontSize": "16",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Semibold-14": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "SemiBold",
+      "lineHeight": "18",
+      "fontSize": "14",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Semibold-12": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "SemiBold",
+      "lineHeight": "16",
+      "fontSize": "12",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Semibold-10": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "SemiBold",
+      "lineHeight": "14",
+      "fontSize": "10",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "Body": {
+    "Medium-18": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Medium",
+      "lineHeight": "22",
+      "fontSize": "18",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Regular-18": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Regular",
+      "lineHeight": "22",
+      "fontSize": "18",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Medium-16": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Medium",
+      "lineHeight": "20",
+      "fontSize": "16",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Regular-16": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Regular",
+      "lineHeight": "20",
+      "fontSize": "16",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Medium-14": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Medium",
+      "lineHeight": "18",
+      "fontSize": "14",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Regular-14": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Regular",
+      "lineHeight": "18",
+      "fontSize": "14",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "Caption": {
+    "Medium-12": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Medium",
+      "lineHeight": "14",
+      "fontSize": "12",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "Regular-12": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Regular",
+      "lineHeight": "14",
+      "fontSize": "12",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  },
+  "Label": {
+    "Medium-12": {
+      "fontFamily": "Pretendard",
+      "fontWeight": "Medium",
+      "lineHeight": "14",
+      "fontSize": "12",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "paragraphIndent": "0px",
+      "textCase": "none",
+      "textDecoration": "none"
+    }
+  }
+}

@@ -1,9 +1,16 @@
 import { defineConfig } from "tsup";
 
-export default defineConfig((options) => ({
-  entryPoints: ["src/button.tsx"],
-  format: ["cjs", "esm"],
-  dts: true,
-  external: ["react"],
-  ...options,
-}));
+export default defineConfig([
+  {
+    format: ["cjs", "esm"],
+    entry: ["src/index.ts"],
+    splitting: false,
+    minify: true,
+    dts: true,
+    clean: false,
+    banner: {
+      js: '"use client";',
+    },
+    tsconfig: "./tsconfig.json",
+  },
+]);
